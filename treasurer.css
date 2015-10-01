@@ -1,0 +1,46 @@
+body {
+	background-color: grey;
+}
+#topBar {
+    position: relative;
+    background-color: #FF0000;
+    text-align: center;  
+    padding: 0%;
+}
+
+#navbar {
+	position: relative;
+    text-align: center;
+    background-color: #FFFF00;
+}
+
+#contact {
+    position: relative;
+    text-align: center;
+    background-color: #FF0000;
+}
+
+#button1{
+	float:bottom;
+	position: relative;
+	background-color: #000000;
+	text-align: center;
+}
+
+#arrow{
+    right: 5%;
+    position: absolute;
+    color: black;
+}
+#arrow: hover{
+   color: green;
+}
+#query{
+    text-align: center;
+    
+
+}
+
+.contact-info button:hover {
+    background-color: green;
+}
