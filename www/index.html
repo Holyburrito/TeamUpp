@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+       <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <link rel="stylesheet" type="text/css" href="css/Menu.css" />
+        <title>TeamUpp</title>
     </head>
     <body>
+<!-- In order to copy paste menu, Begin here-->
+    <!-- Insert menu here-->
+        <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+            <button class="c-menu__close">&larr; Close Menu</button>
+            <ul class="c-menu__items">
+                <li class="c-menu__item"><a href="Main/main.html" class="c-menu__link"><strong>Social Media</strong></a></li>
+                <li class="c-menu__item"><a href="Main/main.html" class="c-menu__link"><strong>Messaging</strong></a></li>
+                <li class="c-menu__item"><a href="Main/main.html" class="c-menu__link"><strong>Calendar</strong></a></li>
+                <li class="c-menu__item"><a href="Main/main.html" class="c-menu__link"><strong>Profile</strong></a></li>
+                <li class="c-menu__item"><a href="Main/main.html" class="c-menu__link"><strong>Execs</strong></a></li>
+            </ul>
+        </nav><!-- /c-menu slide-left -->
+
+<!-- end here -->
+
+        <div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+
         <div class="app">
-            <h1>PhoneGap</h1>
+            <h1>TeamUpp</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+                <p class="event listening">Checking for errors...</p>
+                <p class="event received">Code is good to go!</p>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
+        <div class = "Login">
+            <a href = "Main/main.html">
+                <button class = "login-button" id = "login-button-h" onclick="onLogin()">
+                    <h1 id = "login-button-id">Login</h1>
+                </button>
+            </a>
+            <div id="o-wrapper" class="o-wrapper">
+
+            <div class="c-buttons">
+                <button id="c-button--slide-left" class="c-button">Menu</button>
+            </div>
+
+            <!-- other content in here -->
+
+        </div><!-- /o-wrapper -->
+        </div>
+
+        
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/Menu.js"></script>
         <script type="text/javascript">
             app.initialize();
+        </script>
+        <script>
+            var slideLeft = new Menu({
+                wrapper: '#o-wrapper',
+                type: 'slide-left',
+                menuOpenerClass: '.c-button',
+                maskId: '#c-mask'
+            });
+            var slideLeftBtn = document.querySelector('#c-button--slide-left');
+
+                slideLeftBtn.addEventListener('click', function(e) {
+                e.preventDefault;
+                slideLeft.open();
+            });
         </script>
     </body>
 </html>
