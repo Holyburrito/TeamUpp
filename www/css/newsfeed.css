@@ -1,6 +1,12 @@
 /************************************* Here is the CSS for the newsfeed **********************/
 
 /**
+* IPhone lower button
+*/
+body{
+	margin-top: 50px;
+}
+/**
 * The boxes containing 
 */
 .boxed {
@@ -20,3 +26,8 @@
 	width: 60%;
 	padding: 10px;
 }
+
+
+/**
+* add css for the post page once there
+*/
