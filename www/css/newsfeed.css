@@ -1,0 +1,22 @@
+/************************************* Here is the CSS for the newsfeed **********************/
+
+/**
+* The boxes containing 
+*/
+.boxed {
+  border: 3px solid #5e0903;
+  width: 300px;
+  height: 100px;
+  box-sizing: border-box;
+  background-color: #d2d170;
+  border-radius: 25px;
+  padding: 20px;
+}
+/**
+* centering for the boxes and the header.
+*/
+.center{
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+}
