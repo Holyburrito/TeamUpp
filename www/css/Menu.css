@@ -4,8 +4,9 @@
  * Menu overview.
  */
 .c-menu {
+  /*padding-top:40px;*/ 
+  z-index: 2000;
   position: fixed;
-  z-index: 200;
   background-color: #990000;
   transition: transform 0.3s;
 }
@@ -50,6 +51,7 @@
 body.has-active-menu {
   overflow: hidden;
 }
+
 
 /**
  * Mask component
@@ -132,4 +134,19 @@ body.has-active-menu {
   transform: translateX(0);
 }
 
+.c-buttons{
+  width:47px;
+  display: auto;
+}
+.nav-cont{
+}
+.o-wrapper{
+}
 /************************* Here is the CSS for the NavBar *************************/
+body { 
+  padding-top: 70px;  /*Menu is 70px tall. we want all content below it so shift 70px*/
+}
+
+.navbar{
+  background-color:green;
+}

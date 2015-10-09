@@ -6,8 +6,14 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
+<!-- ***************************************** We need these in this order. Put your css link after index.css but before menu.css *****************************************************-->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
-        <link rel="stylesheet" type="text/css" href="../css/Menu.css" /><!-- COLLIN!!! Here are the links to the CSS pages-->
+        <!-- Your css goes on this line -->
+        <link rel="stylesheet" type="text/css" href="../css/Menu.css" />
+        
+
+        <!-- COLLIN!!! Here are the links to the CSS pages-->
         <title>TeamUpp</title>
     </head>
     <body>
@@ -27,36 +33,40 @@
         </nav><!-- /c-menu slide-left -->
 
 <!-- end here -->
-
 <!-- Begin Nav bar here-->
-        <div class="menuBar">
-            <img class="logo" src = "logo.jpg"/>
-            <div class = "nav">
-                <ul>
-                    <li>Menu 1</li>
-                    <li>Menu 2</li>
-                    <li>Menu 3</li>
-                </ul>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!--Begin Menu Button-->
+            <div class="navbar-header o-wrapper" id="o-wrapper">
+                <div class="c-buttons">
+                    <button class="navbar-brand c-button" id="c-button--slide-left">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden = "true"></span>
+                    </button>
+                </div>
+                <h1>Social Media</h1>
             </div>
-        </div>
+            <!--End Menu Button-->
+          </div>
+        </nav>
 <!--End Nav bar here -->
+
 
 <!-- Begin page data here-->
         <div id="c-mask" class="c-mask"></div><!-- /c-mask -->
 
         <h1>Here is our media page</h1>
-        <!-- Begin menu button -->
-        <div id="o-wrapper" class="o-wrapper">
-
-            <div class="c-buttons">
-                <button id="c-button--slide-left" class="c-button">Menu</button>
-            </div>
-
-            <!-- other content in here -->
-
-        </div><!-- Button Ends here -->
-
+        <h1>Here is our media page2</h1>
+        <h1>Here is our media page3</h1>
+        <h1>Here is our media page4</h1>
+        <h1>Here is our media page5</h1>
+        
+<!-- **************************************************** We need these scripts on all pages for menu to work **************************************** -->
+        <script type="text/javascript" src="../js/jQuery/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap/bootstrap.js"></script>
         <script type="text/javascript" src="../js/Menu.js"></script><!--Collin!!! Here is where we link to the javascript files -->
 <!--End page data here -->
+
     </body>
 </html>
+
+

@@ -137,3 +137,25 @@ slideLeftBtn.addEventListener('click', function(e) {
   e.preventDefault;
   slideLeft.open();
 });
+
+
+
+
+
+/**********************************************************************
+ * Here is the swipe to open menu feature
+ */
+$( document ).on( "pageinit", "#c-menu--slide-left", function() {
+  console.log("winner");
+    $( document ).on( "swiperight", "#c-menu--slide-left", function( e ) {
+        // We check if there is no open panel on the page because otherwise
+        // a swipe to close the left panel would also open the right panel (and v.v.).
+        // We do this by checking the data that the framework stores on the page element (panel: open).
+        if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swiperight" ) {
+              console.log("winner");
+                $( "#c-menu--slide-left" ).panel( "open" );
+            }
+        }
+    });
+});
